@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* .menu-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    margin: 12px 30px;
+}
+.menu-icon:hover{
+    color:red;
+} */
+
+
+
+/* navbar styling */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.searchNav{
+  width:50%;
+}
+.searchBar{
+  width:100%;
+  height:35px;
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+#seacrhButton{
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+#seacrhButton:hover{
+  background: red;
+  color:white;
+  border-radius: 50%;
+}
+.searchHoverText{
+  position: absolute;
+  margin-top: 35px;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black; 
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s;
+  font-weight: 600;
+}
+#seacrhButton:hover .searchHoverText{
+  visibility: visible;
+  opacity: 1;
+}
+i{
+  font-size: 24px;
+}
+
+#micButton{
+  background-color: white;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+#micButton:hover{
+  background: red;
+  color:white;
+  border-radius: 50%;
+}
+.micHoverText{
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 50%;
+  width:200px;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black; 
+  padding: 5px;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s;
+}
+#micButton:hover .micHoverText{
+  visibility: visible;
+  opacity: 1;
+}
+#navbarCreateButton{
+  background-color: white;
+  border: none;
+  position: relative;
+  /* margin-right: 20px; */
+}
+.navbarCreateHoverText{
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 50%;
+  width:200px;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black; 
+  padding: 5px;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s;
+}
+#navbarCreateButton:hover .navbarCreateHoverText{
+  visibility: visible;
+  opacity: 1;
+}
+#navbarCreateButton:hover{
+  background: red;
+  color:white;
+  border-radius: 50%;
+}
+#notificationButton{
+  background-color: white;
+  border: none;
+  position: relative;
+  float: right;
+}
+.notificationHoverText{
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 50%;
+  width:200px;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black; 
+  padding: 5px;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s;
+}
+#notificationButton:hover .notificationHoverText{
+  visibility: visible;
+  opacity: 1;
+}
+#notificationButton:hover{
+  background: red;
+  color:white;
+  border-radius: 50%;
+}
+.profileImg{
+  background-color: white;
+  border: none;
+  position: relative;
+}
+.profileImgHoverText{
+  position: absolute;
+  top: calc(100% + 15px);
+  margin-left: 10px;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black; 
+  padding: 5px;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s;
+}
+.profileImg:hover .profileImgHoverText{
+  visibility: visible;
+  opacity: 1;
+}
+
+.profileImg{
+  /* width:60px; */
+  height:50px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  /* margin-top: -20px; */
+  margin-right:20px;
+}
+.profileImg img{
+width: 50px;
+border-radius: 50%;
+}
+
+
+
+
+
+/* main content styling */
+
+ 
+  
+#videoContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:60px 0px;
+    padding:60px 0px;
+    margin-left: 80px;
+}
+@media (max-width: 768px) {
+  #videoContainer{
+    grid-template-columns: 2fr;
+    padding: 0px;
+  }
+  .leftSideBar{
+    display: none;
+  }
+
+  #videoContainer > div{
+  margin-left: -80px;
+  }
+  #micButton, #navbarCreateButton, #notificationButton, .profileImg{
+    display:none;
+  }
+  .searchBar{
+    width:200%;
+  }
+  .searchButton{
+    float: right;
+    margin: 0px;
+    margin-left: 150px;
+  }
+  #text{
+   display: none;
+  }
+
+}
+.hidden{
+  display:none;
+}
+#text{
+    margin: 200px;
+    width:800px;
+    color:red;
+    background-color: yellow;
+    padding:8px;
+    border-radius: 5px;
+}
+#videoContainer > div {
+  /* border:1px red solid; */
+  width:380px;
+  height:300px;
+  margin-top: -50px;
+}
+.title{
+    font-size: 14px;
+    font-weight: 500;
+    color: red;
+}
+#videoContainer > div > img{
+    height:200px;
+    width:100%;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+#videoContainer > div > img:hover{
+    transform: scaleX(1.08);
+}
+.channelName, .viewsCount{
+    color:red;
+    margin-top: -20px;
+    font-weight: 600;
+    font-size: 14px;
+}
+/* #videoContainer > div > b{
+    position: absolute;
+    background-color: black;
+    padding: 5px;
+    color: white;
+    left: 225px;
+    border-radius: 5px;
+    font-size: 10px;
+} */
+
+  /* left side bar styling */
+
+
+
+  .mainContainer{
+    width:85%;
+    height: 650px;
+    /* border:2px red solid; */
+    overflow-y: scroll;
+    scrollbar-width: thin;
+   scrollbar-color: transparent transparent;
+  }
+
+  .mainContainer::-webkit-scrollbar, .leftSideBar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .mainContainer::-webkit-scrollbar-track, .leftSideBar::-webkit-scrollbar-track{
+    background-color: transparent; 
+  }
+  
+  .container::-webkit-scrollbar-thumb, .leftSideBar::-webkit-scrollbar-thumb{
+    background-color: transparent;
+  }
+  .main-pages{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+  }
+  .leftSideBar button{
+    margin-bottom: 20px;
+    margin-left: 10px;
+    padding:10px;
+    border: none;
+    font-weight: 500;
+    background-color: white;
+  }
+  .leftSideBar button:hover{
+    background-color: lightgray;
+    border-radius: 10px;
+  }
+  
